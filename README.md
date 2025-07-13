@@ -19,6 +19,7 @@ the program outputs a data.json file containing:
 
 # Example of using the program
 #include "log_analyzer.hpp"
+
 int main()
 {
 
