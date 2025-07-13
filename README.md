@@ -1,15 +1,15 @@
 # log-analyzer
+The program analyzes .log files from a given filder.
 
 # Input
 The program receives a .json file that that contains:
 
 {
-    "log_folder":     #path to the folder containing ./log files.
-    "top_n":          #number of top recuring error to report.
-    "include_levels": #list of log level to include.
+    "log_folder":         #path to the folder containing ./log files.
+    "top_n":              #number of top recuring error to report.
+    "include_levels":     #list of log level to include.
 }
 
-The program analyzes .log files from a given filder.
 
 # Output
 the program outputs a data.json file containing:
@@ -28,16 +28,20 @@ int main()
 }
 
 # Run the program
-- C++ compiler (GCC, Clang)
+Compile the project:
+You can add cpp flags as you wish.
 
-Compile the project
-g++ -std=c++17 log_analayzer.cpp -I(dir where log_analayzer.hpp) main -o main
+g++ -std=c++17 log_analayzer.cpp -I(dir where log_analayzer.hpp) main.cpp -o main
 
 Run the program
 ./main
 
 # tests
 To run the tests, do not compile with -DNDEBUG.
+each test is located in a dedicated folder.
+the folder that contains the file test and files associated with that test.
+Please create the executable within the folder.
+
 - test_log_parsing
 - test_config_loading
 - test_error_grouping
@@ -45,13 +49,12 @@ To run the tests, do not compile with -DNDEBUG.
 - test_final
 
 # Using AI
-chatgpt is used
+chatgpt is used.
 
 - read .log file
 https://chatgpt.com/share/6872c2f1-e290-8008-9cef-58c70ec59d18
 
 https://chatgpt.com/share/6872c393-f61c-8008-bcda-6f64ba99e546
-
 
 
 - working with json c++
