@@ -1,12 +1,12 @@
 {
     "level_stats": {
-        "ERROR": 9,
-        "INFO": 5,
-        "WARN": 5
+        "ERROR": 10,
+        "INFO": 6,
+        "WARN": 6
     },
     "top_error_messages": [
         {
-            "count": 4,
+            "count": 5,
             "message": "Connection failed"
         },
         {
@@ -18,5 +18,5 @@
             "message": "Failed Open File"
         }
     ],
-    "total_lines processed": 19
+    "total_lines processed": 22
 }

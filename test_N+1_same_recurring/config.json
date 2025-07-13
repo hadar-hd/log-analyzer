@@ -1,0 +1,5 @@
+{
+    "log_folder": "./logs1",
+    "top_n": 3,
+    "include_levels": ["ERROR", "WARN", "INFO"]
+}

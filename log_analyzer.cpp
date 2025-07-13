@@ -120,15 +120,17 @@ void LogAnalyzer::DocReport()
                                     });
 
     size_t count = 0;
+    int last_value = -1;
     for (const auto& [key, value] : vec)
     {
-        if (count >= m_topN)
+        if (count >= m_topN && value != last_value)
         {
             break;
         }
 
         topMessages.push_back({{"message", key},{"count", value}});
 
+        last_value = value;
         ++count;
     }
 

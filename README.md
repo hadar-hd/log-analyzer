@@ -25,9 +25,9 @@ int main()
 {
 
     BmcLog::LogAnalyzer log_analyzer("./config.json");
-    
+
     log_analyzer.DocReport();
-    
+
     return 0;
 }
 
@@ -50,7 +50,10 @@ Please create the executable within the folder.
 - test_config_loading
 - test_error_grouping
 - testlines_not_valid
+- test_N+1_same_recurring
 - test_final
+
+you can run the executable test.out in each test folder: ./test.out
 
 # Using AI
 chatgpt is used.
