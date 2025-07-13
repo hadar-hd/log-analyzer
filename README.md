@@ -10,6 +10,13 @@ The program receives a .json file that that contains:
     "include_levels":     #list of log level to include.
 }
 
+The folder should contain log files with the extension .log
+
+The format of the log files should be:
+[timestamp] "log level": "message" , file: "file_name" , line: "num_line"
+
+The format can be changed in class Line.
+
 
 # Output
 the program outputs a data.json file containing:
