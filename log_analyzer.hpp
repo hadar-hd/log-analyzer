@@ -20,13 +20,13 @@ public:
 
     void DocReport();//throw runtime_err
 
-    class Line;
+    struct Line;
     class File;
     class Dir;
 
     void ReadLogs();//throw runtime_err
-    
-    #ifndef NDEBUG
+
+    #ifndef NDEBUG //for tests
         std::string GetLogFolder() const;
         size_t GetTopN() const;
         std::vector<std::string> GetLevels() const;
@@ -47,7 +47,7 @@ private:
 
 };//class LogAnalyzer
 
-class LogAnalyzer::Line
+struct LogAnalyzer::Line
 {
 public:
     explicit Line(std::string line);//pattern: (\[(.*?)\] (\w+): (.*) , file: (.*) , line: (\d+))
@@ -57,17 +57,7 @@ public:
     Line& operator=(const Line& other) = default;
 
     bool IsValid() const noexcept;
-    void DoTasks(LogAnalyzer& log_analyzer) noexcept;
 
-    #ifndef NDEBUG
-        std::string GetTimestamp() const;
-        std::string GetLevel() const;
-        std::string GetMessage()const;
-        std::string GetFileName()const;
-        std::string GetLineNum()const;
-    #endif //NDEBUG
-
-private:
     std::string m_timestamp;
     std::string m_level;
     std::string m_message;

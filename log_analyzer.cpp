@@ -67,7 +67,20 @@ void LogAnalyzer::ReadLogs()
         while (file.HasMoreLines())
         {
             Line line(file.BreakLine());
-            line.DoTasks(*this);
+
+            if (line.IsValid())
+            {
+                LevelCounter(line.m_level);
+
+                if (line.m_level == "ERROR")
+                {
+                    ErrMessageCounter(line.m_message);
+                }
+            }
+            else
+            {
+                ++m_notValidCounter;
+            }
         }
     }
 }
@@ -171,23 +184,6 @@ bool LogAnalyzer::Line::IsValid() const noexcept
     return m_valid;
 }
 
-void LogAnalyzer::Line::DoTasks(LogAnalyzer& log_analyzer) noexcept
-{
-    if (IsValid())
-    {
-        log_analyzer.LevelCounter(m_level);
-
-        if (m_level == "ERROR")
-        {
-            log_analyzer.ErrMessageCounter(m_message);
-        }
-    }
-    else
-    {
-        log_analyzer.m_notValidCounter++;
-    }
-
-}
 
 //============================================================================
                                 //Dir
@@ -256,33 +252,8 @@ bool LogAnalyzer::File::HasMoreLines() const
                     //for debug
 //============================================================================
 #ifndef NDEBUG
-    std::string LogAnalyzer::Line::GetTimestamp() const
+    std::string LogAnalyzer::GetLogFolder() const
     {
-        return m_timestamp;
-    }
-
-    std::string LogAnalyzer::Line::GetLevel()const
-    {
-        return m_level;
-    }
-
-    std::string LogAnalyzer::Line::GetMessage()const
-    {
-        return m_message;
-    }
-
-    std::string LogAnalyzer::Line::GetFileName()const
-    {
-        return m_fileName;
-    }
-
-    std::string LogAnalyzer::Line::GetLineNum()const
-    {
-        return m_lineNum;
-    }
-
-std::string LogAnalyzer::GetLogFolder() const
-{
         return m_logFolder;
     }
 

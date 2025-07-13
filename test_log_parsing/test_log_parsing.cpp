@@ -12,30 +12,30 @@ int main() //compile with no -DNDEBUG
         res = false;
         std::cout << "test1: IsValid error: " << line1.IsValid() << std::endl;
     }
-    if(line1.GetTimestamp() != "2025-07-08 12:00:00")
+    if(line1.m_timestamp != "2025-07-08 12:00:00")
     {
         res = false;
-        std::cout << "test1: Timestamp error: " << line1.GetTimestamp() << std::endl;
+        std::cout << "test1: Timestamp error: " << line1.m_timestamp << std::endl;
     }
-    if(line1.GetLevel() != "INFO")
+    if(line1.m_level != "INFO")
     {
         res = false;
-        std::cout << "test1: Level error: " << line1.GetLevel() << std::endl;
+        std::cout << "test1: Level error: " << line1.m_level << std::endl;
     }
-    if(line1.GetMessage() != "Application started")
+    if(line1.m_message != "Application started")
     {
         res = false;
-        std::cout << "test1: Message error: " << line1.GetMessage() << std::endl;
+        std::cout << "test1: Message error: " << line1.m_message << std::endl;
     }
-    if(line1.GetFileName() != "hadar.cpp")
+    if(line1.m_fileName != "hadar.cpp")
     {
         res = false;
-        std::cout << "test1: FileName error: " << line1.GetFileName() << std::endl;
+        std::cout << "test1: FileName error: " << line1.m_fileName << std::endl;
     }
-    if(line1.GetLineNum() != "42")
+    if(line1.m_lineNum != "42")
     {
         res = false;
-        std::cout << "test1: LineNum error: " << line1.GetLineNum() << std::endl;
+        std::cout << "test1: LineNum error: " << line1.m_lineNum << std::endl;
     }
 
     //test: log that is not written according to partially expected format at all

@@ -21,7 +21,7 @@ The format can be changed in class Line.
 # Output
 the program outputs a data.json file containing:
 - total log lines processed
-- count of each log level
+- count of each include level
 - top N recurring error message (level "ERROR")
 
 # Example of using the program
@@ -42,16 +42,19 @@ int main()
 Compile the project:
 You can add cpp flags as you wish.
 
-g++ -std=c++17 log_analayzer.cpp -I(dir where log_analayzer.hpp) main.cpp -o main
+g++ -std=c++17 log_analyzer.cpp -I<path to log_analyzer.hpp> main.cpp -o main
 
 Run the program
 ./main
 
 # tests
-To run the tests, do not compile with -DNDEBUG.
-each test is located in a dedicated folder.
-the folder that contains the file test and files associated with that test.
-Please create the executable within the folder.
+To compile the tests, run: make
+
+To run the tests without using the Makefile:
+- Do not compile with the -DNDEBUG flag, as this may disable assertions or debug-related code.
+- Each test is located in its own dedicated folder.
+- The folder contains the main test file along with any files associated with that specific test.
+- Please compile and create the executable within the same folder as the test.
 
 - test_log_parsing
 - test_config_loading
