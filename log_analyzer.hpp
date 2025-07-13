@@ -18,13 +18,14 @@ public:
     LogAnalyzer(const LogAnalyzer& other) = delete;
     LogAnalyzer& operator=(const LogAnalyzer& other) = delete;
 
-    void ReadLogs();//throw runtime_err
     void DocReport();//throw runtime_err
 
     class Line;
     class File;
     class Dir;
 
+    void ReadLogs();//throw runtime_err
+    
     #ifndef NDEBUG
         std::string GetLogFolder() const;
         size_t GetTopN() const;
