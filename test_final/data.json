@@ -1,0 +1,22 @@
+{
+    "level_stats": {
+        "ERROR": 9,
+        "INFO": 5,
+        "WARN": 5
+    },
+    "top_error_messages": [
+        {
+            "count": 4,
+            "message": "Connection failed"
+        },
+        {
+            "count": 3,
+            "message": "Alloc Failed"
+        },
+        {
+            "count": 2,
+            "message": "Failed Open File"
+        }
+    ],
+    "total_lines processed": 19
+}

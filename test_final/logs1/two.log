@@ -1,0 +1,6 @@
+[2025-07-08 12:02:00] WARN: Low memory , file: a.log , line: 9
+[2025-07-08 12:00:00] INFO: Application started , file: a.log , line: 7
+[2025-07-08 12:02:00] WARN: Low memory , file: a.log , line: 9
+[2025-07-08 12:00:00] INFO: Application started , file: a.log , line: 7
+[2025-07-10 12:02:00] ERROR: Failed Open File , file: b.log , line: 3
+[2025-07-09 12:02:00] ERROR: Failed Open File , file: b.log , line: 2

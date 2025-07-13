@@ -1,0 +1,20 @@
+[2025-07-08 12:01:00] ERROR: Connection failed , file: a.log , line: 1
+[2025-07-08 12:02:00] ERROR: Failed Open File , file: a.log , line: 2
+[2025-07-08 12:02:00] ERROR: Alloc Failed , file: a.log , line: 3
+//==================================================================
+[2025-07-08 12:01:00] ERROR: Connection failed , file: b.log , line: 1
+[2025-07-09 12:02:00] ERROR: Failed Open File , file: b.log , line: 2
+[2025-07-10 12:02:00] ERROR: Alloc Failed , file: b.log , line: 3
+//==================================================================
+[2025-07-11 12:01:00] ERROR: Connection failed , file: c.log , line: 1
+[2025-07-11 12:02:00] ERROR: Failed Open File , file: c.log , line: 2
+[2025-07-11 12:02:00] ERROR: Alloc Failed , file: c.log , line: 3
+//==================================================================
+[2025-07-12 12:01:00] ERROR: Connection failed , file: d.log , line: 1
+[2025-07-13 12:02:00] ERROR: Failed Open File , file: d.log , line: 2
+[2025-07-14 12:02:00] ERROR: Alloc Failed , file: d.log , line: 3
+//==================================================================
+[2025-07-14 12:01:00] ERROR: Connection failed , file: e.log , line: 1
+[2025-07-14 12:02:00] ERROR: Failed Open File , file: e.log , line: 2
+[2025-07-14 12:02:00] ERROR: Alloc Failed , file: e.log , line: 3
+

@@ -1,0 +1,14 @@
+{
+    "level_stats": {
+        "ERROR": 4,
+        "INFO": 5,
+        "WARN": 4
+    },
+    "top_error_messages": [
+        {
+            "count": 4,
+            "message": "Connection failed"
+        }
+    ],
+    "total_lines processed": 13
+}

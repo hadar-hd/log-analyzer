@@ -1,0 +1,5 @@
+[2025-07-08 12:01:00] ERROR: Connection failed , file: a.log , line: 1
+[2025-07-08 12:02:00] WARN: Low memory , file: a.log , line: 9
+[2025-07-08 12:00:00] INFO: Application started , file: a.log , line: 7
+[2025-07-08 12:01:00] ERROR: Connection failed , file: a.log , line: 1
+[2025-07-08 12:01:00] ERROR: Connection failed , file: a.log , line: 1
